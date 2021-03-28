@@ -1,0 +1,20 @@
+<div class="form">
+<div class="form-player1">
+    <span>{{player1}}</span>
+    <input [(ngModel)]="playerInput1" placeholder="Jugador # 1"/>
+</div>
+
+<div class="form-vs">Vs.</div>
+
+<div class="form-player2">
+<span>{{player2}}</span>
+<input  [(ngModel)]="playerInput2" placeholder="Jugador # 2"/>
+
+</div>
+<div class="form-button">
+    <button (click)="validateForm()">
+        Jugar
+    </button>
+</div>
+
+</div>

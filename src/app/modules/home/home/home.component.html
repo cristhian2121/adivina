@@ -1,11 +1,22 @@
 <div class="home">
-    <div class="home-title">Entrena tu memoria</div>
-    <div class="home-rules">
-        Existen 12 cartas que tiene un número por debajo y cada
-        jugador tendra un turno par alzar un carta e intenrar recordar o
-        adivinar donde esta su par. El juego lo gana quien mas cartas adivine
+    <div class="home-title">
+        <h1> Entrena tu memoria </h1>
     </div>
-    <div class="home-player1"></div>
-    <div class="home-vs"></div>
-    <div class="home-player2"></div>
+    <div class="home-rules">
+        <p>
+            Existen 12 cartas que tiene un número por debajo y cada
+            jugador tendra un turno par alzar un carta e intenrar recordar o
+            adivinar donde esta su par. El juego lo gana quien mas cartas adivine
+        </p>
+    </div>
+
+    <div class="home-players">
+        <app-player-form 
+        [player1] = "'Jugador 1'"
+        [player2] = "'Jugador 2'"
+
+        (isError) = "startGame($event)"></app-player-form>  
+    </div>
+  
+    <p *ngIf="error" class="text-error">Debe ingresar u nombre de jugador. </p>
 </div>

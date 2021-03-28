@@ -1,13 +1,18 @@
-import { NgModule } from "@angular/core";
+import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { GameFormComponent } from "./modules/game/game-form/game-form.component";
 
 // Components
 import { HomeComponent } from "./modules/home/home/home.component";
 
 const routes: Routes = [
     {
-        path:'home',
-        component: HomeComponent
+        path:'',
+        component: HomeComponent,
+    },
+    {
+        path:'game',
+        component: GameFormComponent
     },
 ]
 
